@@ -36,9 +36,7 @@ public class DynamicPaginationTable {
                     String headers = driver.findElement(By.xpath("(//div[@class='oxd-table']//div[@class='oxd-table-header']//div[@role='columnheader'])["+j+"]")).getText();
                     System.out.print(headers+ "\t");
                 }else{
-                    if(j==1 || j==6)
-                        continue;
-                    else {
+                    if(j!=1 && j!=6){
                         String val = driver.findElement(By.xpath("(//div[@class='oxd-table']//div[@class='oxd-table-body']//div[@class='oxd-table-card'])[" + (i-1) + "]//div[@class='oxd-table-cell oxd-padding-cell'][" + j + "]")).getText();
                         System.out.print(val + "\t");
                     }
